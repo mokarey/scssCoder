@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+ 
+/*----------GRID-AREAS----------*/
+#grid{
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "nav nav nav"
+    "section section section"
+    "destacado destacado destacado"
+    "footer footer footer"
+    ;
+    grid-template-columns: 15%;
+    grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+    
+}
+
+header{
+    grid-area: cabeza;
+}
+
+nav{
+    grid-area: nav;
+}
+
+#section1{
+    grid-area:section;
+    background-color: rgb(46, 5, 158);
+}
+
+#section2{
+    grid-area: destacado;
+    background-color: rgb(46, 5, 158);
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+/*----------HEADER----------*/
+.portada{
+     text-align: center;
+     padding: 20px;
+     background: linear-gradient(to left top,rgb(74, 152, 255), rgb(134, 59, 255), rgb(0, 217, 255) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: cyber 3s linear infinite;
+    background-size: 200% 200%;
+}
+
+.borderHead{
+    border-top: solid rgb(50, 255, 245) 2px;
+    border-bottom: solid rgb(50, 255, 245) 2px;
+}
+
+@keyframes cyber{
+
+    from {
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: 100% 100%;
+        
+    }
+
+    
+
+}
+
+nav{
+    background-color: rgb(14, 13, 13);
+    color: rgb(91, 201, 164);
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+
+
+
+.navGrid{
+    display:flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.navGrid span{
+    background-color: rgb(6, 255, 172);
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/*----------MAIN----------*/
+
+.articleUno h3{
+    font-size: 2rem;
+    color: rgb(0, 183, 255);
+    text-align: center;
+    padding: 10px;
+    text-shadow: 3px 3px 0 black;
+}
+
+.articleUnoT h3{
+    font-size: 2rem;
+    color: rgb(0, 183, 255);
+    text-align: center;
+    padding: 5px;
+    text-shadow: 3px 3px 0 black;
+}
+
+.articleUnoT h4{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.articleUno h4{
+    text-align: center;
+    font-size: 25px;
+}
+
+.articleDos h3{
+    font-size: 2rem;
+    color: rgb(255, 251, 0);
+    text-align: center;
+    padding: 10px;
+    text-shadow: 4px 4px 0 black;
+}
+
+.articleDos h4{
+    text-align: center;
+}
+
+.articleDosT h3{
+    font-size: 2rem;
+    color: rgb(225, 0, 255);
+    text-align: center;
+    padding: 5px;
+    text-shadow: 4px 4px 0 black;
+}
+
+.articleDosT h4{
+    text-align: center;
+    padding: 5px;
+}
+
+.galeria{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.galeriaS{
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(27, 104, 167);
+    border-bottom: solid 4px rgb(80, 229, 255);
+    border-right: solid 4px rgb(80, 229, 255);
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    justify-content: flex-end;
+}
+
+.galeriaS h3{
+    padding: 5px;
+}
+
+.galeriaS p{
+    padding: 5px;
+}
+
+.galeriaS img{
+    width: 200px;
+    border: solid rgb(0, 60, 170) 4px;
+}
+
+.galeriaS a{
+    font-weight: 700;
+    color: rgb(77, 211, 211);
+    
+}
+
+.galeriaT img{
+    width: 200px;
+    border: solid rgb(0, 60, 170) 4px;
+}
+
+.galeriaT{
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(29, 121, 196);
+    border-right: solid 4px rgb(80, 229, 255);
+    border-bottom: solid 4px rgb(80, 229, 255);
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    justify-content: flex-end;
+}
+
+.galeriaT h3{
+    padding: 5px;
+}
+
+.galeriaT a{
+    font-weight: 700;
+    color: rgb(77, 211, 211);
+}
+
+.galeriaS p{
+    padding: 5px;
+}
+
+.galeria2{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+}
+
+.galeria2 h2{
+    font-size: 3rem;
+}
+
+.galeriaS2 img{
+    width: 200px;
+    border: solid rgb(255, 251, 0) 3px;
+}
+
+.galeriaS2{
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(27, 104, 167);
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    justify-content: center;
+    align-content: center;
+    border: solid 3px yellow;
+}
+
+.galeriaS2 h3{
+    padding: 5px;
+}
+
+.galeriaS2 p{
+    padding: 5px;
+    margin: 2px  5px  2px  5px;
+}
+
+.galeriaS2 a{
+    font-weight: 700;
+    color: rgb(238, 255, 0);
+    
+}
+
+.galeriaT2 img{
+    width: 200px;
+    border: solid rgb(225, 0, 255) 3px;
+}
+
+.galeriaT2{
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(29, 121, 196);
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    justify-content: center;
+    align-content: center;
+    border: solid 3px rgb(225, 0, 255);
+}
+
+.galeriaT2 h3{
+    padding: 5px;
+}
+
+.galeriaT2 p{
+    padding: 5px;
+    margin: 2px  5px  2px  5px;
+}
+
+.galeriaT2 a{
+    font-weight: 700;
+    color: rgb(225, 0, 255);
+    
+}
+
+/*----------FOOTER----------*/
+
+.foot article{
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.foot article a{
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    color: rgb(26, 166, 209);
+}
+
+.borderFoot{
+    border-top: solid rgb(50, 255, 245) 2px;
+}
+/*----------MEDIA QUERIES----------*/
+
+@media (min-width:1024px) {
+    header{
+        font-size: 30px;
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Imagenes/Cyberstore.jpg);
+       }
+
+       .borderNav{
+        border-bottom: solid rgb(50, 255, 245) 2px;
+        }
+
+        header{
+            font-size: 60px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../Imagenes/Cyberstore.jpg);
+        }
+}
+
+@media (min-width:481px) and (max-width:1023px){
+   header{
+    font-size: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Imagenes/Cyberstore.jpg);
+   }
+
+   img{
+    min-width: 50%;
+   }
+
+   .borderNav{
+    border-bottom: solid rgb(50, 255, 245) 2px;
+    }
+}
+
+@media (max-width:480px){
+    #grid{
+        display: grid;
+        grid-template-areas: 
+        "cabeza cabeza"
+        "nav section"
+        "nav destacado"
+        "footer footer"
+        
+        ;
+        grid-template-columns: 27% 73%;
+        grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+        
+    }
+    
+    header{
+        font-size: 35px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../Imagenes/Cyberstore.jpg);
+    }
+
+    .navGrid {
+        flex-direction: column;
+    }
+    
+    span{
+        cursor: pointer;
+        background-color: aquamarine;
+        padding: 8px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    .galeriaS{
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(27, 104, 167);
+        border-bottom: solid 4px rgb(80, 229, 255);
+        border-right: solid 4px rgb(80, 229, 255);
+        border-radius: 15px;
+        padding: 2px;
+        justify-content: flex-end;
+    }
+    
+    .articleUno h4{
+        margin: 5px;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .articleUno p{
+        padding: 0px;
+    }
+
+    .articleDos h3{
+        font-size: 2rem;
+        color: rgb(255, 251, 0);
+        text-align: center;
+        padding: 5px;
+        text-shadow: 4px 4px 0 black;
+    }
+    
+    .articleDos h4{
+        text-align: center;
+        padding: 4px;
+    }
+
+    .galeriaS h3{
+        padding: 5px;
+        font-size: 17px;
+    }
+    
+    .galeriaS p{
+        padding: 2px;
+        margin: 4px;
+    }
+    
+    .galeriaS img{
+        width: 130px;
+        border: solid rgb(0, 60, 170) 4px;
+    }
+    
+    .galeriaS a{
+        font-weight: 700;
+        color: rgb(77, 211, 211);
+        padding: 2px;
+        
+    }
+
+    .galeriaS2 img{
+        width: 130px;
+        border: solid rgb(255, 251, 0) 3px;
+    }
+    
+    .galeriaS2{
+        padding: 5px;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(27, 104, 167);
+        border-radius: 15px;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        align-content: center;
+        border: solid 3px yellow;
+    }
+    
+    .galeriaS2 h3{
+        padding: 5px;
+    }
+    
+    .galeriaS2 p{
+        padding: 5px;
+        margin: 2px  5px  2px  5px;
+    }
+    
+    .galeriaS2 a{
+        font-weight: 700;
+        color: rgb(238, 255, 0);
+        
+    }
+
+    .galeriaT img{
+        width: 130px;
+        border: solid rgb(0, 60, 170) 4px;
+    }
+    
+    .galeriaT{
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(29, 121, 196);
+        border-right: solid 4px rgb(80, 229, 255);
+        border-bottom: solid 4px rgb(80, 229, 255);
+        border-radius: 15px;
+        padding: 5px 5px 5px 5px;
+        justify-content: flex-end;
+    }
+    
+    .galeriaT h3{
+        padding: 5px;
+    }
+    
+    .galeriaT a{
+        font-weight: 700;
+        color: rgb(77, 211, 211);
+    }
+    
+}
