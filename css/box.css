@@ -5,6 +5,102 @@
   box-sizing: border-box;
 }
 
+/*----------VARIABLES----------*/
+.catalogo, .galeriaT2, .galeria2 .galeriaS2, .galeriaT, .galeriaS {
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(27, 104, 167);
+  border-bottom: solid 4px rgb(80, 229, 255);
+  border-right: solid 4px rgb(80, 229, 255);
+  border-radius: 15px;
+  padding: 5px 5px 5px 5px;
+  justify-content: flex-end;
+}
+
+.galeria {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+.galeriaS img {
+  width: 200px;
+  border: solid rgb(76, 0, 255) 4px;
+}
+.galeriaS p {
+  padding: 5px;
+}
+.galeriaS h3 {
+  padding: 5px;
+}
+.galeriaS a {
+  font-weight: 700;
+  color: rgb(77, 211, 211);
+}
+
+.galeriaT {
+  border-bottom: solid 4px rgb(255, 238, 0);
+  border-right: solid 4px rgb(255, 238, 0);
+}
+.galeriaT img {
+  width: 200px;
+  border: solid rgb(255, 251, 0) 4px;
+}
+.galeriaT p {
+  padding: 5px;
+}
+.galeriaT h3 {
+  padding: 5px;
+}
+.galeriaT a {
+  font-weight: 700;
+  color: rgb(77, 211, 211);
+}
+
+.galeria2 {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.galeria2 h2 {
+  font-size: 3rem;
+}
+.galeria2 .galeriaS2 img {
+  width: 200px;
+  border: solid rgb(255, 251, 0) 3px;
+}
+.galeria2 .galeriaS2 h3 {
+  padding: 5px;
+}
+.galeria2 .galeriaS2 a {
+  font-weight: 700;
+  color: rgb(238, 255, 0);
+}
+.galeria2 .galeriaS2 p {
+  padding: 5px;
+  margin: 2px 5px 2px 5px;
+}
+
+.galeriaT2 {
+  border: solid 3px rgb(225, 0, 255);
+}
+.galeriaT2 img {
+  width: 200px;
+  border: solid rgb(225, 0, 255) 3px;
+}
+.galeriaT2 h3 {
+  padding: 5px;
+}
+.galeriaT2 p {
+  padding: 5px;
+  margin: 2px 5px 2px 5px;
+}
+.galeriaT2 a {
+  font-weight: 700;
+  color: rgb(225, 0, 255);
+}
+
 /*----------GRID-AREAS----------*/
 header {
   grid-area: cabeza;
@@ -35,6 +131,7 @@ body {
   height: 100vh;
 }
 
+/*----------VARIABLES----------*/
 /*----------HEADER----------*/
 .portada {
   text-align: center;
@@ -48,8 +145,8 @@ body {
 }
 
 .borderHead {
-  border-top: solid rgb(50, 255, 245) 2px;
-  border-bottom: solid rgb(50, 255, 245) 2px;
+  border-top: solid rgb(50, 214, 255) 2px;
+  border-bottom: solid rgb(50, 214, 255) 2px;
 }
 
 @keyframes cyber {
@@ -73,9 +170,9 @@ nav {
   justify-content: center;
 }
 .navGrid span {
-  background-color: rgb(6, 255, 172);
-  padding: 8px;
+  padding: 7px;
   margin: 5px;
+  background-color: rgb(6, 255, 243);
   border-radius: 5px;
 }
 
@@ -92,36 +189,26 @@ nav {
   align-items: center;
 }
 
-.articleUno h3 {
-  font-size: 2rem;
-  color: rgb(0, 183, 255);
-  text-align: center;
-  padding: 10px;
-  text-shadow: 3px 3px 0 black;
-}
-.articleUno h4 {
-  text-align: center;
-  font-size: 25px;
-}
-
-.articleDos h3 {
-  font-size: 2rem;
-  color: rgb(255, 251, 0);
-  text-align: center;
-  padding: 10px;
-  text-shadow: 4px 4px 0 black;
-}
-.articleDos h4 {
-  text-align: center;
-}
-
-.articleUnoT h3 {
+.titulosh3, .articleUnoT h3, .articleDos h3, .articleUno h3 {
   font-size: 2rem;
   color: rgb(0, 183, 255);
   text-align: center;
   padding: 5px;
   text-shadow: 3px 3px 0 black;
 }
+
+.articleUno h4 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.articleDos h3 {
+  color: rgb(255, 251, 0);
+}
+.articleDos h4 {
+  text-align: center;
+}
+
 .articleUnoT h4 {
   text-align: center;
   padding: 10px;
@@ -139,125 +226,6 @@ nav {
   padding: 5px;
 }
 
-.galeria {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-}
-.galeria .galeriaS {
-  padding: 10px;
-  text-align: center;
-  margin: 10px;
-  background-color: rgb(27, 104, 167);
-  border-bottom: solid 4px rgb(80, 229, 255);
-  border-right: solid 4px rgb(80, 229, 255);
-  border-radius: 15px;
-  padding: 5px 5px 5px 5px;
-  justify-content: flex-end;
-}
-.galeria .galeriaS img {
-  width: 200px;
-  border: solid rgb(0, 60, 170) 4px;
-}
-.galeria .galeriaS p {
-  padding: 5px;
-}
-.galeria .galeriaS h3 {
-  padding: 5px;
-}
-.galeria .galeriaS a {
-  font-weight: 700;
-  color: rgb(77, 211, 211);
-}
-
-.galeriaT {
-  padding: 10px;
-  text-align: center;
-  margin: 10px;
-  background-color: rgb(29, 121, 196);
-  border-right: solid 4px rgb(80, 229, 255);
-  border-bottom: solid 4px rgb(80, 229, 255);
-  border-radius: 15px;
-  padding: 5px 5px 5px 5px;
-  justify-content: flex-end;
-}
-.galeriaT img {
-  width: 200px;
-  border: solid rgb(0, 60, 170) 4px;
-}
-.galeriaT h3 {
-  padding: 5px;
-}
-.galeriaT a {
-  font-weight: 700;
-  color: rgb(77, 211, 211);
-}
-.galeriaT p {
-  padding: 5px;
-}
-
-.galeria2 {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-}
-.galeria2 h2 {
-  font-size: 3rem;
-}
-.galeria2 .galeriaS2 {
-  padding: 5px;
-  text-align: center;
-  margin: 10px;
-  background-color: rgb(27, 104, 167);
-  border-radius: 15px;
-  padding: 5px 5px 5px 5px;
-  justify-content: center;
-  align-content: center;
-  border: solid 3px yellow;
-}
-.galeria2 .galeriaS2 img {
-  width: 200px;
-  border: solid rgb(255, 251, 0) 3px;
-}
-.galeria2 .galeriaS2 h3 {
-  padding: 5px;
-}
-.galeria2 .galeriaS2 a {
-  font-weight: 700;
-  color: rgb(238, 255, 0);
-}
-.galeria2 .galeriaS2 p {
-  padding: 5px;
-  margin: 2px 5px 2px 5px;
-}
-
-.galeriaT2 .galeriaT2 {
-  padding: 5px;
-  text-align: center;
-  margin: 10px;
-  background-color: rgb(29, 121, 196);
-  border-radius: 15px;
-  padding: 5px 5px 5px 5px;
-  justify-content: center;
-  align-content: center;
-  border: solid 3px rgb(225, 0, 255);
-}
-.galeriaT2 .galeriaT2 img {
-  width: 200px;
-  border: solid rgb(225, 0, 255) 3px;
-}
-.galeriaT2 .galeriaT2 h3 {
-  padding: 5px;
-}
-.galeriaT2 .galeriaT2 p {
-  padding: 5px;
-  margin: 2px 5px 2px 5px;
-}
-.galeriaT2 .galeriaT2 a {
-  font-weight: 700;
-  color: rgb(225, 0, 255);
-}
-
 /*----------FOOTER----------*/
 .foot article {
   color: aliceblue;
@@ -272,7 +240,7 @@ nav {
 }
 
 .borderFoot {
-  border-top: solid rgb(50, 255, 245) 2px;
+  border-top: solid rgb(50, 214, 255) 2px;
 }
 
 /*----------MEDIA QUERIES----------*/
@@ -284,7 +252,7 @@ nav {
     background-image: url(../Imagenes/Cyberstore.jpg);
   }
   .borderNav {
-    border-bottom: solid rgb(50, 255, 245) 2px;
+    border-bottom: solid rgb(50, 214, 255) 2px;
   }
   header {
     font-size: 60px;
@@ -304,7 +272,7 @@ nav {
     min-width: 50%;
   }
   .borderNav {
-    border-bottom: solid rgb(50, 255, 245) 2px;
+    border-bottom: solid rgb(50, 214, 255) 2px;
   }
 }
 @media (max-width: 480px) {

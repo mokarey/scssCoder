@@ -1,0 +1,134 @@
+$azul: rgb(50, 214, 255);
+$galeria: rgb(76, 0, 255);  
+$galeriaT: rgb(255, 251, 0); 
+/*----------VARIABLES----------*/
+
+.catalogo{
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(27, 104, 167);
+    border-bottom: solid 4px rgb(80, 229, 255);
+    border-right: solid 4px rgb(80, 229, 255);
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    justify-content: flex-end;
+}
+
+.galeria{
+display: flex;
+flex-flow: wrap;
+justify-content: space-evenly;
+
+}
+.galeriaS{
+    @extend .catalogo;
+
+    img{
+        width: 200px;
+        border: solid $galeria 4px;
+    }
+
+    p{
+        padding: 5px;
+    }
+
+    h3{
+        padding: 5px;
+    }
+
+    a{
+        font-weight: 700;
+        color: rgb(77, 211, 211);
+        
+    }
+}
+
+
+.galeriaT{
+@extend .catalogo;
+border-bottom: solid 4px rgb(255, 238, 0);
+border-right: solid 4px rgb(255, 238, 0);
+
+img{
+    width: 200px;
+    border: solid $galeriaT 4px;
+}
+
+p{
+    padding: 5px;
+}
+
+h3{
+    padding: 5px;
+}
+
+a{
+    font-weight: 700;
+    color: rgb(77, 211, 211);
+    
+}
+}
+
+.galeria2{
+display: flex;
+flex-flow: wrap;
+justify-content: center;
+
+h2{
+    font-size: 3rem;
+}
+
+.galeriaS2{
+    @extend .catalogo;
+
+    img{
+        width: 200px;
+        border: solid rgb(255, 251, 0) 3px;
+    }
+
+    h3{
+        padding: 5px;
+    }
+
+    a{
+        font-weight: 700;
+        color: rgb(238, 255, 0);
+        
+    }
+
+    p{
+        padding: 5px;
+        margin: 2px  5px  2px  5px;
+    }
+
+
+
+
+
+}
+}
+.galeriaT2{
+@extend .catalogo;
+border: solid 3px rgb(225, 0, 255);
+
+img{
+    width: 200px;
+    border: solid rgb(225, 0, 255) 3px;
+}
+
+h3{
+    padding: 5px;
+}
+
+p{
+    padding: 5px;
+    margin: 2px  5px  2px  5px;
+}
+
+a{
+    font-weight: 700;
+    color: rgb(225, 0, 255);
+    
+}
+}

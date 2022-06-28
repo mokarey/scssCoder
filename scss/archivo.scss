@@ -1,44 +1,20 @@
-// comentario de linea en scss//
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
- 
-/*----------GRID-AREAS----------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+@import "colores";
+@import "catalogo";
+@import "grillas";
 
 
-header{
-    grid-area: cabeza;
-}
+$azul: rgb(50, 214, 255);
+$galeria: rgb(76, 0, 255);  
+$galeriaT: rgb(255, 251, 0);  
+/*----------VARIABLES----------*/
 
-nav{
-    grid-area: nav;
-}
-
-#section1{
-    grid-area:section;
-    background-color: rgb(64, 10, 214);
-}
-
-#section2{
-    grid-area: destacado;
-    background-color: rgb(46, 5, 158);
-    
-}
-
-footer{
-    grid-area: footer;
-    background-color: black;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100vh;
-}
 /*----------HEADER----------*/
 .portada{
      text-align: center;
@@ -52,8 +28,8 @@ body{
 }
 
 .borderHead{
-    border-top: solid rgb(50, 255, 245) 2px;
-    border-bottom: solid rgb(50, 255, 245) 2px;
+    border-top: solid $azul 2px;
+    border-bottom: solid $azul 2px;
 }
 
 @keyframes cyber{
@@ -66,6 +42,11 @@ body{
         background-position: 100% 100%;
         
     }
+}
+
+@mixin nav($pad, $marg){
+    padding: $pad;
+    margin: $marg;
 }
 
 nav{
@@ -81,9 +62,8 @@ nav{
     justify-content: center; 
 
     span{
-        background-color: rgb(6, 255, 172);
-        padding: 8px;
-        margin: 5px;
+        @include nav(7px,5px );
+        background-color: rgb(6, 255, 243);
         border-radius: 5px;
     }
 }
@@ -100,14 +80,17 @@ nav{
     align-items: center;
 }
 
-.articleUno {
-
-    h3{
+.titulosh3{
         font-size: 2rem;
         color: rgb(0, 183, 255);
         text-align: center;
-        padding: 10px;
+        padding: 5px;
         text-shadow: 3px 3px 0 black;
+}
+.articleUno {
+
+    h3{
+       @extend .titulosh3;
     }
 
     h4{
@@ -115,14 +98,10 @@ nav{
         font-size: 25px;
     }
 }
-
 .articleDos{
     h3{
-        font-size: 2rem;
+        @extend .titulosh3;
         color: rgb(255, 251, 0);
-        text-align: center;
-        padding: 10px;
-        text-shadow: 4px 4px 0 black;
     }
 
     h4{
@@ -132,11 +111,7 @@ nav{
 
 .articleUnoT{
     h3{
-        font-size: 2rem;
-        color: rgb(0, 183, 255);
-        text-align: center;
-        padding: 5px;
-        text-shadow: 3px 3px 0 black;
+        @extend .titulosh3;
     }
     h4{
         text-align: center;
@@ -160,158 +135,7 @@ nav{
     }
 }
 
-.galeria{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
-    
-    .galeriaS{
-        padding: 10px;
-        text-align: center;
-        margin: 10px;
-        background-color: rgb(27, 104, 167);
-        border-bottom: solid 4px rgb(80, 229, 255);
-        border-right: solid 4px rgb(80, 229, 255);
-        border-radius: 15px;
-        padding: 5px 5px 5px 5px;
-        justify-content: flex-end;
-    
-        img{
-            width: 200px;
-            border: solid rgb(0, 60, 170) 4px;
-        }
 
-        p{
-            padding: 5px;
-        }
-
-        h3{
-            padding: 5px;
-        }
-
-        a{
-            font-weight: 700;
-            color: rgb(77, 211, 211);
-            
-        }
-    }
-}
-
-
-
-.galeriaT{
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    background-color: rgb(29, 121, 196);
-    border-right: solid 4px rgb(80, 229, 255);
-    border-bottom: solid 4px rgb(80, 229, 255);
-    border-radius: 15px;
-    padding: 5px 5px 5px 5px;
-    justify-content: flex-end;
-
-    img{
-        width: 200px;
-        border: solid rgb(0, 60, 170) 4px;
-    }
-
-    h3{
-        padding: 5px;
-    }
-    
-    a{
-        font-weight: 700;
-        color: rgb(77, 211, 211);
-    }
-    
-    p{
-        padding: 5px;
-    }
-
-}
-
-
-
-.galeria2{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    
-    h2{
-        font-size: 3rem;
-    }
-
-    .galeriaS2{
-        padding: 5px;
-        text-align: center;
-        margin: 10px;
-        background-color: rgb(27, 104, 167);
-        border-radius: 15px;
-        padding: 5px 5px 5px 5px;
-        justify-content: center;
-        align-content: center;
-        border: solid 3px yellow;
-
-        img{
-            width: 200px;
-            border: solid rgb(255, 251, 0) 3px;
-        }
-
-        h3{
-            padding: 5px;
-        }
-
-        a{
-            font-weight: 700;
-            color: rgb(238, 255, 0);
-            
-        }
-
-        p{
-            padding: 5px;
-            margin: 2px  5px  2px  5px;
-        }
-
-
-
-
-
-    }
-}
-
-.galeriaT2 
-
-.galeriaT2{
-    padding: 5px;
-    text-align: center;
-    margin: 10px;
-    background-color: rgb(29, 121, 196);
-    border-radius: 15px;
-    padding: 5px 5px 5px 5px;
-    justify-content: center;
-    align-content: center;
-    border: solid 3px rgb(225, 0, 255);
-
-    img{
-        width: 200px;
-        border: solid rgb(225, 0, 255) 3px;
-    }
-
-    h3{
-        padding: 5px;
-    }
-
-    p{
-        padding: 5px;
-        margin: 2px  5px  2px  5px;
-    }
-
-    a{
-        font-weight: 700;
-        color: rgb(225, 0, 255);
-        
-    }
-}
 /*----------FOOTER----------*/
 .foot{
     article{
@@ -329,7 +153,7 @@ nav{
 }
 
 .borderFoot{
-    border-top: solid rgb(50, 255, 245) 2px;
+    border-top: solid $azul 2px;
 }
 /*----------MEDIA QUERIES----------*/
 
@@ -342,7 +166,7 @@ nav{
        }
 
        .borderNav{
-        border-bottom: solid rgb(50, 255, 245) 2px;
+        border-bottom: solid $azul 2px;
         }
 
         header{
@@ -366,7 +190,7 @@ nav{
    }
 
    .borderNav{
-    border-bottom: solid rgb(50, 255, 245) 2px;
+    border-bottom: solid $azul 2px;
     }
 }
 
